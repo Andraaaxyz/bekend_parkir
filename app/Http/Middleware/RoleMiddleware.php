@@ -8,10 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class RoleMiddleware
 {
-    /**
-     * Handle an incoming request.
-     * Usage: role:admin  | role:admin,petugas | role:owner
-     */
     public function handle(Request $request, Closure $next, string ...$roles): Response
     {
         $user = $request->user();
@@ -26,7 +22,7 @@ class RoleMiddleware
         if (! in_array($user->role, $roles)) {
             return response()->json([
                 'success' => false,
-                'message' => 'Akses ditolak. Role tidak memiliki izin untuk mengakses resource ini.',
+                'message' => 'Akses ditolak. Anda tidak memiliki hak untuk di role ini.',
             ], 403);
         }
 
