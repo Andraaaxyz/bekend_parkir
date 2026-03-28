@@ -1,4 +1,4 @@
-# Sistem Manajemen Parkir API
+# Sistem Manajemen Parkir
 
 Proyek ini adalah backend RESTful API berbasis **Laravel** untuk mengelola aktivitas operasional parkir secara sistematis dan otomatis. API ini menangani alur dari saat kendaraan masuk (check-in), mencatat waktu parkir, hingga kendaraan keluar (check-out) dengan kalkulasi tarif otomatis berdasarkan durasi parkir dan jenis kendaraan. Sistem juga mencakup pemantauan kapasitas area parkir secara real-time.
 
